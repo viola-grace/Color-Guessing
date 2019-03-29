@@ -1,0 +1,44 @@
+#id{
+    background:url("background.jpg");
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    background-size: cover;
+    font-family: Comic Sans MS;
+    font-size:40px;
+    padding:20px;
+    color:black;
+     opacity:100px;
+    z-index:-50;
+}
+body{
+    background-color:white;
+}
+button{
+    font-family: Comic Sans MS;
+    font-size:20px;
+    font-style: italic;
+    font-weight: 400;
+    background-image:linear-gradient(white,brown);
+    border-radius:30px;
+    border-color:black;
+    box-shadow:2px 2px black;
+    padding:15px;
+}
+#alert
+{
+    font-family: Comic Sans MS;
+    font-size:20px;
+}
+.p1{
+     font-family: Comic Sans MS;
+    font-size:30px;
+    text-shadow: 50px;
+    padding:0px;
+    text-align:center;
+    line-height: 30px;
+    opacity:100px;
+    z-index:-50;
+}

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="colorcss.css">
+        <title>Color guess</title>
+    </head>
+   
+    <body>
+        <div id="id">
+        <script>
+            function appr()
+                    {
+                   document.getElementById("h").innerHTML="CONGRATULATIONS.. WANNA TRY AGAIN?";
+                    }
+            var color=["azure", "pink", "chocolate", "cyan", "grey", "green", "red", "lavender", "navy", "olive", "brown", "yellow"];
+            var i,num,target,store,count=0;
+            function hello()
+            {
+            var num=Math.floor(Math.random()*color.length);
+            var target=color[num],correct=0;
+           while(correct==0)
+            {
+                var store=prompt("PLAY HERE\nThe color I have for you is in this list[\"Azure\", \"Pink\", \"Chocolate\", \"Cyan\", \"Grey\", \"Green\", \"Red\", \"Lavender\", \"Navy\", \"Olive\", \"Brown\", \"Yellow\"]\n ENTER THE COLOR HERE!!!");
+                if(store===null)
+                    {
+                        break;
+                    }
+                check(num,store,target); 
+//                document.getElementsByTagName("p").innerHTML="Keep Trying......";
+            }           
+            function check(num,store,target)
+            {
+               
+             if(color.indexOf(store)<=-1)
+                    {
+                        confirm("Not valid");
+                         count++;
+                       
+                    }
+                else if(store.length==color[num].length&&store!=color[num])
+                    {
+                        confirm("You are getting closer");
+                         count++;
+                    }
+                else if(store.length>color[num].length)
+                    {
+                        confirm("The word length is MORE than mine KEEP TRYING ");
+                        count++;
+                        
+                    }
+                else if(store.length<color[num].length)
+                    {
+                        confirm("The word length is LESS than mine KEEP TRYING")
+                         count++;
+                       
+                    }
+                else {
+                    
+                    confirm("YOU WON Number of tries..."+count+"\n CLICK ON THE TEXT(lets start) TO GET YOUR APPRECIATION...");
+                    count=0;
+                    correct=1;
+                    document.getElementById("id").style.background =store;
+                }
+            }
+            } 
+        </script>
+            <bold><p class="p1">Hi... Welcome to "Guess it correctly game"!!</p>
+            <p class="p1">So,What's this game? Well....</p>
+                <p class="p1">The computer will choose a color for you from the list which will be shown,and you will have to guess the color correctly..Let me see how many tries do you take!!</p></bold>
+            
+        <center> <p id="h" onclick="appr()">Let's start.....</p></center>
+        <center><img src="clap.gif" width="150px" height="130px"></center>
+        <center><button onclick="hello()">NOW...</button></center>
+            </div>
+    </body>
+    
+</html>
